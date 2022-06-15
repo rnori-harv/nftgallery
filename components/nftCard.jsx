@@ -1,9 +1,10 @@
 export const NFTCard = ({ nft }) => {
-
     return (
         <div className="w-1/4 flex flex-col ">
         <div className="rounded-md">
-            <img className="object-cover h-128 w-full rounded-t-md" src={nft.media[0].gateway} ></img>
+            <a href={"https://opensea.io/assets/ethereum/" + `${nft.contract.address}` + "/" + parseInt(nft.id.tokenId, 16)}>
+                <img className="object-cover h-128 w-full rounded-t-md" src={nft.media[0].gateway} ></img>
+            </a>
         </div>
         <div className="flex flex-col y-gap-2 px-2 py-3 bg-slate-100 rounded-b-md h-110 ">
             <div className="">
